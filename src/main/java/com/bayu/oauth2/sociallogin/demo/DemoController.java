@@ -9,4 +9,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(path = "/api/v1/demo")
 public class DemoController {
 
+    @GetMapping
+    public ResponseEntity<String> hello() {
+        return ResponseEntity.ok("Hello from secure endpoint");
+    }
+
 }
